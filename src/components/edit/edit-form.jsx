@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import Voca from './voca';
+import Voca from '../voca/voca';
 
 const EditForm = ({lists, updateVocas, deleteVocas}) => {
 

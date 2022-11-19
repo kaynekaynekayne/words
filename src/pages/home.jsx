@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
-import AddForm from '../components/add-form';
-import EditForm from '../components/edit-form';
-import Invisible from '../components/invisible';
+import AddForm from '../components/add/add-form';
+import EditForm from '../components/edit/edit-form';
+import Invisible from '../components/invisible/invisible';
 
 const Home = () => {
     const [lists,setLists]=useState([]);
