@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import AddForm from '../components/add-form';
 import EditForm from '../components/edit-form';
+import Invisible from '../components/invisible';
 
 const Home = () => {
     const [lists,setLists]=useState([]);
@@ -33,6 +34,7 @@ const Home = () => {
 
     return (
         <div>
+            <Invisible />
             <EditForm 
                 lists={lists} 
                 updateVocas={updateVocas}

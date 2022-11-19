@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from './button';
 
-const Voca = ({list, index, updateVocas, deleteVocas}) => {
+const Voca = ({list, index, updateVocas, deleteVocas,}) => {
 
     const [newWords, setNewWords]=useState(list.words);
     const [newMeanings, setNewMeanings]=useState(list.meanings);
@@ -19,6 +19,7 @@ const Voca = ({list, index, updateVocas, deleteVocas}) => {
     return (
         <form>
             <input 
+                // style={{color:'white'}}
                 value={newWords}
                 onChange={(e)=>setNewWords(e.target.value)}
                 required

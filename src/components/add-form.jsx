@@ -20,6 +20,7 @@ const AddForm = ({createVocas}) => {
     return (
         <form onSubmit={handleAdd}>
             <input 
+                style={{backgroundColor:'lightgray'}}
                 type="text"
                 placeholder="단어"
                 value={words}
@@ -27,6 +28,7 @@ const AddForm = ({createVocas}) => {
                 required
             />
             <input 
+                style={{backgroundColor:'lightgray'}}
                 type="text"
                 placeholder="뜻"
                 value={meanings}
