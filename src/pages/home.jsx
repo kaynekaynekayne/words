@@ -8,6 +8,7 @@ const Home = () => {
     useEffect(()=>{
         if(localStorage.getItem("voca")){
             const exitedList=JSON.parse(localStorage.getItem("voca"));
+            console.log(exitedList)
             setLists(exitedList);
         }
     },[]);
@@ -17,10 +18,24 @@ const Home = () => {
         localStorage.setItem("voca",JSON.stringify([...lists, voca]));
     }
 
+    const updateVocas=(word, meaning, index)=>{
+        if(localStorage.getItem("voca")){
+            const getData=JSON.parse(localStorage.getItem('voca'));
+            console.log(word, meaning);
+            getData[index].words=`${word}`;
+            getData[index].meanings=`${meaning}`;
+            
+            localStorage.setItem("voca", JSON.stringify(getData));
+        }
+    }
+
 
     return (
         <div>
-            <EditForm lists={lists} setLists={setLists}/>
+            <EditForm 
+                lists={lists} 
+                updateVocas={updateVocas}    
+            />
             <AddForm createVocas={createVocas}/>
         </div>
     )

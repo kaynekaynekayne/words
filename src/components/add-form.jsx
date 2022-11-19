@@ -5,7 +5,7 @@ const AddForm = ({createVocas}) => {
     const [words, setWords]=useState("");
     const [meanings, setMeanings]=useState("");
 
-    const handleSubmit=(e)=>{
+    const handleAdd=(e)=>{
         e.preventDefault();
         const voca={
             id:new Date().getTime(),
@@ -17,7 +17,7 @@ const AddForm = ({createVocas}) => {
         setMeanings("");
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleAdd}>
             <input 
                 type="text"
                 placeholder="단어"

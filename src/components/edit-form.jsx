@@ -2,18 +2,18 @@ import React,{useEffect} from 'react'
 import Invisible from '../components/invisible';
 import Voca from './voca';
 
-const EditForm = ({lists, setList}) => {
-    console.log(lists);
+const EditForm = ({lists, updateVocas}) => {
 
     return (
         <div>
             <Invisible />
             <div>
-                {lists.map(list=>
+                {lists.map((list, index)=>
                     <Voca 
                         key={list.id} 
                         list={list}
-                        setList={setList}
+                        index={index}
+                        updateVocas={updateVocas}
                     />
                 )}
             </div>
