@@ -28,8 +28,8 @@ const Voca = ({list, index, updateVocas, deleteVocas}) => {
                 onChange={(e)=>setNewMeanings(e.target.value)}
                 required
             />
-            <Button name="변경" onClick={handleUpdate}/>
-            <Button name="삭제" onClick={handleDelete}/>
+            <Button title="변경" onClick={handleUpdate}/>
+            <Button title="삭제" onClick={handleDelete}/>
         </form>
     )
 }

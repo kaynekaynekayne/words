@@ -33,7 +33,7 @@ const AddForm = ({createVocas}) => {
                 onChange={(e)=>setMeanings(e.target.value)}
                 required
             />
-            <Button name="추가"/>
+            <Button title="추가"/>
         </form>
     )
 }
