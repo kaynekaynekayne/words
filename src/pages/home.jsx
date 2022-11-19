@@ -45,9 +45,7 @@ const Home = () => {
 
     return (
         <div>
-            <Invisible
-                toggleLock={toggleLock}
-            />
+            <Invisible toggleLock={toggleLock} />
             <EditForm 
                 lists={lists} 
                 updateVocas={updateVocas}

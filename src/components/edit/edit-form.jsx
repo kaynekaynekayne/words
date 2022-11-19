@@ -1,5 +1,7 @@
 import React,{useEffect} from 'react'
 import Voca from '../voca/voca';
+import styles from './edit-form.module.css';
+
 
 const EditForm = ({lists, updateVocas, deleteVocas,lock}) => {
 
