@@ -1,35 +1,35 @@
 import React, { useState } from 'react'
 
-const Voca = ({list, index, updateVocas}) => {
+const Voca = ({list, index, updateVocas, deleteVocas}) => {
 
     const [newWords, setNewWords]=useState(list.words);
     const [newMeanings, setNewMeanings]=useState(list.meanings);
 
-    const handleConfirm=(e)=>{
+    const handleUpdate=(e)=>{
         e.preventDefault();
-        console.log(index);
         updateVocas(newWords, newMeanings, index);
-    }
+    };
+
+    const handleDelete=(e)=>{
+        e.preventDefault();
+        deleteVocas(list.id);
+    };
 
     return (
-        <div>
-            <form>
-                <input 
-                    value={newWords}
-                    onChange={(e)=>setNewWords(e.target.value)}
-                    required
-                />
-                <input 
-                    value={newMeanings}
-                    onChange={(e)=>setNewMeanings(e.target.value)}
-                    required
-                />
-                <button
-                    onClick={handleConfirm}
-                >변경</button>
-                <button>삭제</button>
-            </form>
-        </div>
+        <form>
+            <input 
+                value={newWords}
+                onChange={(e)=>setNewWords(e.target.value)}
+                required
+            />
+            <input 
+                value={newMeanings}
+                onChange={(e)=>setNewMeanings(e.target.value)}
+                required
+            />
+            <button onClick={handleUpdate}>변경</button>
+            <button onClick={handleDelete}>삭제</button>
+        </form>
     )
 }
 

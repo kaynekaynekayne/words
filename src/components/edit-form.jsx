@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import Invisible from '../components/invisible';
 import Voca from './voca';
 
-const EditForm = ({lists, updateVocas}) => {
+const EditForm = ({lists, updateVocas, deleteVocas}) => {
 
     return (
         <div>
@@ -14,6 +14,7 @@ const EditForm = ({lists, updateVocas}) => {
                         list={list}
                         index={index}
                         updateVocas={updateVocas}
+                        deleteVocas={deleteVocas}
                     />
                 )}
             </div>
