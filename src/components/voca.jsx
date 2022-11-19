@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from './button';
 
 const Voca = ({list, index, updateVocas, deleteVocas}) => {
 
@@ -27,8 +28,8 @@ const Voca = ({list, index, updateVocas, deleteVocas}) => {
                 onChange={(e)=>setNewMeanings(e.target.value)}
                 required
             />
-            <button onClick={handleUpdate}>변경</button>
-            <button onClick={handleDelete}>삭제</button>
+            <Button name="변경" onClick={handleUpdate}/>
+            <Button name="삭제" onClick={handleDelete}/>
         </form>
     )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from './button';
 
 const AddForm = ({createVocas}) => {
 
@@ -32,7 +33,7 @@ const AddForm = ({createVocas}) => {
                 onChange={(e)=>setMeanings(e.target.value)}
                 required
             />
-            <button>+</button>
+            <Button name="추가"/>
         </form>
     )
 }
