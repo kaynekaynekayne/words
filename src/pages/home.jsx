@@ -5,14 +5,25 @@ import Invisible from '../components/invisible/invisible';
 
 const Home = () => {
     const [lists,setLists]=useState([]);
+    const [lock, setLock]=useState({
+        word:false,
+        mean:false
+    });
 
     useEffect(()=>{
         if(localStorage.getItem("voca")){
             const exitedList=JSON.parse(localStorage.getItem("voca"));
             setLists(exitedList);
         }
-        console.log(lists);
     },[]);
+
+    const toggleLock=(named)=>{
+        setLock(prev=>{
+            return {
+                ...prev, [named]:!prev[named]
+            }
+        })
+    };
 
     const createVocas=(voca)=>{
         setLists([...lists, voca]);
@@ -34,11 +45,14 @@ const Home = () => {
 
     return (
         <div>
-            <Invisible />
+            <Invisible
+                toggleLock={toggleLock}
+            />
             <EditForm 
                 lists={lists} 
                 updateVocas={updateVocas}
-                deleteVocas={deleteVocas}    
+                deleteVocas={deleteVocas}
+                lock={lock}
             />
             <AddForm createVocas={createVocas}/>
         </div>

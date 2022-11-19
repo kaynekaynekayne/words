@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import Voca from '../voca/voca';
 
-const EditForm = ({lists, updateVocas, deleteVocas}) => {
+const EditForm = ({lists, updateVocas, deleteVocas,lock}) => {
 
     return (
         <div>
@@ -12,6 +12,7 @@ const EditForm = ({lists, updateVocas, deleteVocas}) => {
                     index={index}
                     updateVocas={updateVocas}
                     deleteVocas={deleteVocas}
+                    lock={lock}
                 />
             )}
         </div>

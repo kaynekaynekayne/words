@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Button from '../button/button';
+import styles from './voca.module.css';
 
-const Voca = ({list, index, updateVocas, deleteVocas,}) => {
+const Voca = ({list, index, updateVocas, deleteVocas,lock}) => {
 
     const [newWords, setNewWords]=useState(list.words);
     const [newMeanings, setNewMeanings]=useState(list.meanings);
@@ -19,12 +20,13 @@ const Voca = ({list, index, updateVocas, deleteVocas,}) => {
     return (
         <form>
             <input 
-                // style={{color:'white'}}
+                className={lock.word ? styles.lock : ""}
                 value={newWords}
                 onChange={(e)=>setNewWords(e.target.value)}
                 required
             />
             <input 
+                className={lock.mean ? styles.lock : ""}
                 value={newMeanings}
                 onChange={(e)=>setNewMeanings(e.target.value)}
                 required
