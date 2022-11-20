@@ -42,6 +42,10 @@ const Home = () => {
         localStorage.setItem("voca", JSON.stringify(deleted));
     };
 
+    const clearAllVocas=()=>{
+        setLists([]);
+        localStorage.removeItem("voca");
+    }
 
     return (
         <div>
@@ -53,6 +57,7 @@ const Home = () => {
                 lock={lock}
             />
             <AddForm createVocas={createVocas}/>
+            <button onClick={clearAllVocas}>전체삭제</button>
         </div>
     )
 }
