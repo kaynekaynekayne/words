@@ -2,6 +2,8 @@ import React,{useState, useEffect} from 'react'
 import AddForm from '../components/add/add-form';
 import EditForm from '../components/edit/edit-form';
 import Invisible from '../components/invisible/invisible';
+import Pagination from '../components/pagination/pagination';
+import { DATA_PER_PAGE } from '../utils/constants';
 
 const Home = () => {
     const [lists,setLists]=useState([]);
@@ -9,13 +11,22 @@ const Home = () => {
         word:false,
         mean:false
     });
-
+    
+    const [page, setPage]=useState(1);
+    const [totalPages, setTotalPages]=useState(0);
+    
     useEffect(()=>{
         if(localStorage.getItem("voca")){
             const exitedList=JSON.parse(localStorage.getItem("voca"));
             setLists(exitedList);
+            console.log(lists.length)
+            setTotalPages(Math.ceil(exitedList.length/DATA_PER_PAGE)); //constant 처리
         }
     },[]);
+
+    const handlePage=(num)=>{
+        setPage(num);
+    };
 
     const toggleLock=(named)=>{
         setLock(prev=>{
@@ -42,11 +53,6 @@ const Home = () => {
         localStorage.setItem("voca", JSON.stringify(deleted));
     };
 
-    const clearAllVocas=()=>{
-        setLists([]);
-        localStorage.removeItem("voca");
-    }
-
     return (
         <div>
             <Invisible toggleLock={toggleLock} />
@@ -55,9 +61,13 @@ const Home = () => {
                 updateVocas={updateVocas}
                 deleteVocas={deleteVocas}
                 lock={lock}
+                page={page}
             />
             <AddForm createVocas={createVocas}/>
-            <button onClick={clearAllVocas}>전체삭제</button>
+            <Pagination 
+                totalPages={totalPages}
+                handlePage={handlePage}
+            />
         </div>
     )
 }

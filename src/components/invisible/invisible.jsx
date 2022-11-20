@@ -1,11 +1,9 @@
 import React from 'react'
+import { MEAN, WORD } from '../../utils/constants';
 import styles from './invisible.module.css';
 
 const Invisible = ({toggleLock}) => {
     
-    const WORD="word";
-    const MEAN="mean";
-
     return (
         <>
             <button onClick={()=>toggleLock(WORD)}>단어 숨김</button>
