@@ -14,13 +14,12 @@ const Home = () => {
     
     const [page, setPage]=useState(1);
     const [totalPages, setTotalPages]=useState(0);
-    
+
     useEffect(()=>{
         if(localStorage.getItem("voca")){
             const exitedList=JSON.parse(localStorage.getItem("voca"));
             setLists(exitedList);
-            console.log(lists.length)
-            setTotalPages(Math.ceil(exitedList.length/DATA_PER_PAGE)); //constant 처리
+            setTotalPages(Math.ceil(exitedList.length/DATA_PER_PAGE));
         }
     },[]);
 
