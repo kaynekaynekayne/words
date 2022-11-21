@@ -60,6 +60,7 @@ const Home = () => {
             <Pagination 
                 totalPages={totalPages}
                 handlePage={handlePage}
+                currPage={page}
             />
         </div>
     )
