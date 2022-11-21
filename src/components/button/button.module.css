@@ -1,0 +1,16 @@
+@value softGreen, midGreen from '../../common/colors.css';
+
+.btn{
+    border:1px solid black;
+    /* border-radius:0.5rem; */
+    border:0;
+    color:white;
+    background-color: softGreen;
+    margin-left:0.3rem;
+    padding:0.6rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: midGreen;
+}

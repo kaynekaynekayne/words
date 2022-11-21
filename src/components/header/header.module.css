@@ -1,0 +1,6 @@
+@value softWhite from '../../common/colors.css';
+
+.header{
+    padding:1.5rem;
+    background-color: softWhite;
+}

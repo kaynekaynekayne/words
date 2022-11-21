@@ -14,26 +14,19 @@ const Home = () => {
     });
     
     const [page, setPage]=useState(1);
-    const [totalPages, setTotalPages]=useState(0);
-
+    const [totalPages, setTotalPages]=useState(1);
+    
     useEffect(()=>{
         if(localStorage.getItem("voca")){
             const exitedList=JSON.parse(localStorage.getItem("voca"));
             setLists(exitedList);
             setTotalPages(Math.ceil(exitedList.length/DATA_PER_PAGE));
         }
-    },[]);
+        console.log(lock);
+    },[lock]);
 
     const handlePage=(num)=>{
         setPage(num);
-    };
-
-    const toggleLock=(named)=>{
-        setLock(prev=>{
-            return {
-                ...prev, [named]:!prev[named]
-            }
-        })
     };
 
     const createVocas=(voca)=>{
@@ -55,7 +48,7 @@ const Home = () => {
 
     return (
         <div className={styles.home}>
-            <Invisible toggleLock={toggleLock} />
+            <Invisible setLock={setLock} />
             <VocaContainer 
                 lists={lists} 
                 createVocas={createVocas}

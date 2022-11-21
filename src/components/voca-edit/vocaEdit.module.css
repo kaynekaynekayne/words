@@ -1,4 +1,67 @@
+@value softGreen, softRed, softWhite, midGreen from '../../common/colors.css';
+
+.form{
+    margin:0.5rem auto;
+}
+
+.input{
+    /* border:1px solid black; */
+    /* border-radius:0.2rem; */
+    margin-right:0.5rem;
+    padding:0.8rem;
+    border:0;
+    background-color: softWhite;
+}
+
+.input:focus{
+    outline:none;
+}
+
+.btn{
+    border:none;
+    background-color: transparent;
+    font-size:1rem;
+    margin:0 0.3rem;
+    padding:0.7rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.check:hover{
+    color:white;
+    background-color: softGreen;
+}
+
+.check{
+    color: softGreen;
+    background-color: softWhite;
+}
+
+.del:hover{
+    color:white;
+    background-color: softRed;
+}
+
+.del{
+    color: softRed;
+    background-color: softWhite;
+}
 
 .lock{
-    color:white
+    color:softWhite;
+}
+
+@media screen and (max-width:768px){
+    .form{
+        width:80%;
+    }
+    
+    .input{
+        /* width:8rem;
+        margin-right:0.5rem;
+        padding:0.5rem;
+        border:0;
+        background-color: softWhite; */
+    }
+    
 }

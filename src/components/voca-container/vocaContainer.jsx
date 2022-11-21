@@ -11,6 +11,7 @@ const VocaContainer = ({lists, updateVocas, deleteVocas, lock, page, createVocas
 
     return (
         <div>
+            <VocaAdd createVocas={createVocas}/>
             {showedData.map((list, index)=>
                 <VocaEdit 
                     key={list.id} 
@@ -21,7 +22,6 @@ const VocaContainer = ({lists, updateVocas, deleteVocas, lock, page, createVocas
                     lock={lock}
                 />
             )}
-            <VocaAdd createVocas={createVocas}/>
         </div>
     )
 }

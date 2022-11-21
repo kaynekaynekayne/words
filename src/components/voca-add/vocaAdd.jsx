@@ -19,9 +19,9 @@ const VocaAdd = ({createVocas}) => {
         setMeanings("");
     }
     return (
-        <form onSubmit={handleAdd}>
+        <form className={styles.form} onSubmit={handleAdd}>
             <input 
-                style={{backgroundColor:'lightgray'}}
+                className={styles.input}
                 type="text"
                 placeholder="단어"
                 value={words}
@@ -29,14 +29,14 @@ const VocaAdd = ({createVocas}) => {
                 required
             />
             <input 
-                style={{backgroundColor:'lightgray'}}
+                className={styles.input}
                 type="text"
                 placeholder="뜻"
                 value={meanings}
                 onChange={(e)=>setMeanings(e.target.value)}
                 required
             />
-            <Button title="추가"/>
+            <Button title="단어장 추가"/>
         </form>
     )
 }

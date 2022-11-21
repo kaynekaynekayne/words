@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Button from '../button/button';
 import styles from './vocaEdit.module.css';
+import {RiDeleteBinLine} from 'react-icons/ri';
+import {BsPencilSquare} from 'react-icons/bs';
 
 const VocaEdit = ({list, index, updateVocas, deleteVocas,lock}) => {
 
@@ -18,21 +20,31 @@ const VocaEdit = ({list, index, updateVocas, deleteVocas,lock}) => {
     };
 
     return (
-        <form>
+        <form className={styles.form}>
             <input 
-                className={lock.word ? styles.lock : ""}
+                className={`${styles.input} ${lock.word ? styles.lock : ""}`}
                 value={newWords}
                 onChange={(e)=>setNewWords(e.target.value)}
                 required
             />
             <input 
-                className={lock.mean ? styles.lock : ""}
+                className={`${styles.input} ${lock.mean ? styles.lock : ""}`}
                 value={newMeanings}
                 onChange={(e)=>setNewMeanings(e.target.value)}
                 required
             />
-            <Button title="변경" onClick={handleUpdate}/>
-            <Button title="삭제" onClick={handleDelete}/>
+            <button
+                className={`${styles.check} ${styles.btn}`}
+                onClick={handleUpdate}
+            >
+                <BsPencilSquare />
+            </button>
+            <button 
+                className={`${styles.del} ${styles.btn}`}
+                onClick={handleDelete}
+            >
+                <RiDeleteBinLine />
+            </button>
         </form>
     )
 }

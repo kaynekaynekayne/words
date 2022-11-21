@@ -1,0 +1,8 @@
+.page{
+    width:100%;
+    background: white;
+    text-align: center;
+    /* position:fixed;
+    bottom:0; */
+    padding:1rem;
+}
