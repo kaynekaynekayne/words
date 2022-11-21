@@ -5,6 +5,8 @@
     text-decoration: none;
     box-sizing: border-box;
     color:inherit;
+    font-size:medium;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .app{

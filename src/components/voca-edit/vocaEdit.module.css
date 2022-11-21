@@ -1,7 +1,8 @@
 @value softGreen, softRed, softWhite, midGreen from '../../common/colors.css';
 
 .form{
-    margin:0.5rem auto;
+    margin:0.5rem 0;
+    text-align: center;
 }
 
 .input{
@@ -52,16 +53,7 @@
 }
 
 @media screen and (max-width:768px){
-    .form{
-        width:80%;
-    }
-    
     .input{
-        /* width:8rem;
-        margin-right:0.5rem;
-        padding:0.5rem;
-        border:0;
-        background-color: softWhite; */
-    }
-    
+        width:6.2rem;
+    }   
 }
