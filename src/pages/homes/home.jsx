@@ -1,9 +1,11 @@
 import React,{useState, useEffect} from 'react'
-import AddForm from '../components/add/add-form';
-import EditForm from '../components/edit/edit-form';
-import Invisible from '../components/invisible/invisible';
-import Pagination from '../components/pagination/pagination';
-import { DATA_PER_PAGE } from '../utils/constants';
+import AddForm from '../../components/add/add-form';
+import EditForm from '../../components/edit/edit-form';
+import Invisible from '../../components/invisible/invisible';
+import Pagination from '../../components/pagination/pagination';
+import { DATA_PER_PAGE } from '../../utils/constants';
+import styles from './home.module.css';
+
 
 const Home = () => {
     const [lists,setLists]=useState([]);
@@ -53,7 +55,7 @@ const Home = () => {
     };
 
     return (
-        <div>
+        <div className={styles.home}>
             <Invisible toggleLock={toggleLock} />
             <EditForm 
                 lists={lists} 
