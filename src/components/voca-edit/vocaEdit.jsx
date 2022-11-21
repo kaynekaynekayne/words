@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Button from '../button/button';
-import styles from './voca.module.css';
+import styles from './vocaEdit.module.css';
 
-const Voca = ({list, index, updateVocas, deleteVocas,lock}) => {
+const VocaEdit = ({list, index, updateVocas, deleteVocas,lock}) => {
 
     const [newWords, setNewWords]=useState(list.words);
     const [newMeanings, setNewMeanings]=useState(list.meanings);
@@ -37,4 +37,4 @@ const Voca = ({list, index, updateVocas, deleteVocas,lock}) => {
     )
 }
 
-export default Voca;
+export default VocaEdit;

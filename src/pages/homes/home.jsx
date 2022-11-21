@@ -1,10 +1,9 @@
 import React,{useState, useEffect} from 'react'
-import AddForm from '../../components/add/add-form';
-import EditForm from '../../components/edit/edit-form';
 import Invisible from '../../components/invisible/invisible';
 import Pagination from '../../components/pagination/pagination';
 import { DATA_PER_PAGE } from '../../utils/constants';
 import styles from './home.module.css';
+import VocaContainer from '../../components/voca-container/vocaContainer';
 
 
 const Home = () => {
@@ -57,14 +56,14 @@ const Home = () => {
     return (
         <div className={styles.home}>
             <Invisible toggleLock={toggleLock} />
-            <EditForm 
+            <VocaContainer 
                 lists={lists} 
+                createVocas={createVocas}
                 updateVocas={updateVocas}
                 deleteVocas={deleteVocas}
                 lock={lock}
                 page={page}
             />
-            <AddForm createVocas={createVocas}/>
             <Pagination 
                 totalPages={totalPages}
                 handlePage={handlePage}

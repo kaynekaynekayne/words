@@ -1,16 +1,18 @@
-import React,{useEffect} from 'react'
-import { DATA_PER_PAGE } from '../../utils/constants';
-import Voca from '../voca/voca';
-import styles from './edit-form.module.css';
+import React from 'react'
+import { DATA_PER_PAGE } from '../../utils/constants'
+import VocaEdit from '../voca-edit/vocaEdit';
+import VocaAdd from '../voca-add/vocaAdd';
 
 
-const EditForm = ({page, lists, updateVocas, deleteVocas,lock}) => {
-    const startIndex=(page-1)*DATA_PER_PAGE
+const VocaContainer = ({lists, updateVocas, deleteVocas, lock, page, createVocas}) => {
+    
+    const startIndex=(page-1)*DATA_PER_PAGE;
     const showedData=lists.slice(startIndex, startIndex+DATA_PER_PAGE);
+
     return (
         <div>
             {showedData.map((list, index)=>
-                <Voca 
+                <VocaEdit 
                     key={list.id} 
                     list={list}
                     index={index}
@@ -19,8 +21,9 @@ const EditForm = ({page, lists, updateVocas, deleteVocas,lock}) => {
                     lock={lock}
                 />
             )}
+            <VocaAdd createVocas={createVocas}/>
         </div>
     )
 }
 
-export default EditForm;
+export default VocaContainer;

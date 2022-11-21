@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Button from '../button/button';
-import styles from './add-form.module.css';
+import styles from './vocaAdd.module.css';
 
-const AddForm = ({createVocas}) => {
+const VocaAdd = ({createVocas}) => {
 
     const [words, setWords]=useState("");
     const [meanings, setMeanings]=useState("");
@@ -41,4 +41,4 @@ const AddForm = ({createVocas}) => {
     )
 }
 
-export default AddForm;
+export default VocaAdd;
