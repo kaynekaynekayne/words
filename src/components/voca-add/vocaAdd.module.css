@@ -1,7 +1,7 @@
 @value softGreen, softRed, softWhite from '../../common/colors.css';
 
 .form{
-    margin-bottom:1.5rem;
+    margin-bottom:1rem;
 }
 
 .input{
