@@ -1,0 +1,5 @@
+@value softGreen, softRed, softWhite, midGreen from '../../common/colors.css';
+
+.correct{
+    color:midGreen;
+}

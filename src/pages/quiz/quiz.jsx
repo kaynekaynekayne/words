@@ -8,7 +8,6 @@ const Quiz = () => {
 
     useEffect(()=>{
         const existedList=JSON.parse(localStorage.getItem("voca"));
-        //sort() 로직 이해
         setRandomList(existedList.sort(() => Math.random() - 0.5));
     },[]);
 
@@ -21,7 +20,7 @@ const Quiz = () => {
                 />
             :
                 <QuizMain 
-                    randomList={randomList} 
+                    randomList={randomList.length > 30 ? randomList.slice(0,30) : randomList} 
                     setQuizReady={setQuizReady}
                 />
             }

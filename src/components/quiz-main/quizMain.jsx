@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import styles from './quizMain.module.css';
+
 
 const QuizMain = ({randomList, setQuizReady}) => {
 
     const [currIdx, setCurrIdx]=useState(0);
-    const [clicked, setClicked]=useState(false);
     const [score, setScore]=useState(0);
     const [showScore, setShowScore]=useState(false);
     const [answer, setAnswer]=useState("");
+    const [clicked, setClicked]=useState(false);
 
 
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(answer===randomList[currIdx].meanings) {
-            console.log("정답")
             setScore(score+1);
-            setClicked(true);
-        } else{
-            console.log("틀림")
-            setClicked(true);
         }
+        setClicked(true);
     };
     
     const handleNext=()=>{
@@ -30,8 +28,6 @@ const QuizMain = ({randomList, setQuizReady}) => {
             setShowScore(true);
         }
     }
-
-
 
     return (
         <div>
@@ -55,13 +51,16 @@ const QuizMain = ({randomList, setQuizReady}) => {
                                 value={answer}
                             />
                             <button
+                                disabled={clicked}
+                                onClick={()=>handleSubmit}
                             >제출</button>
+                            {clicked && <div className={styles.correct}>{randomList[currIdx].meanings}</div>}
                         </form>
                     </div>
                     <div>
                         <button
+                            disabled={!clicked}
                             onClick={handleNext}
-                            // disabled={!clicked}
                         >NEXT</button>
                     </div>
                 </>
