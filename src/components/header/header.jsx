@@ -4,7 +4,7 @@ import styles from './header.module.css';
 
 const Header = () => {
     return (
-        //고쳐야됨
+        //nav로 뜯어 고쳐야됨
         <header className={styles.header}>
             <Link to="/">
                 MEMORIZE
