@@ -1,19 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import QuizMain from '../../components/quiz-main/quizMain';
 import QuizMenu from '../../components/quiz-menu/quizMenu';
 
 const Quiz = () => {
-    const [quizReady, setQuizReady]=useState(false);
-    const [score, setScore]=useState(0);
+    const [quizReady, setQuizReady]=useState(true);
+    const [randomList, setRandomList]=useState([]);
+
+    useEffect(()=>{
+        const existedList=JSON.parse(localStorage.getItem("voca"));
+        //sort() 로직 이해
+        setRandomList(existedList.sort(() => Math.random() - 0.5));
+    },[]);
 
     return (
         <div>
             {quizReady ? 
-                <QuizMenu setQuizReady={setQuizReady}/>
+                <QuizMenu 
+                    setQuizReady={setQuizReady}
+                    list={randomList}
+                />
             :
                 <QuizMain 
-                    score={score} 
-                    setScore={setScore}
+                    randomList={randomList} 
                     setQuizReady={setQuizReady}
                 />
             }

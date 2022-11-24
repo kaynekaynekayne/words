@@ -1,9 +1,17 @@
 import React from 'react'
 
-const QuizMenu = ({setQuizReady}) => {
+const QuizMenu = ({list, setQuizReady}) => {
+    const startQuiz=()=>{
+        if(list.length<4){
+            alert("단어장의 단어가 최소 5개 이상이어야 시작할 수 있습니다");
+            return;
+        } else{
+            setQuizReady(false)
+        }
+    }
     return (
         <div>
-            <button onClick={()=>setQuizReady(false)}>START</button>
+            <button onClick={startQuiz}>START</button>
         </div>
     )
 }

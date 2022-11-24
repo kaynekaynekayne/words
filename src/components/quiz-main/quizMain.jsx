@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
-const QuizMain = ({score, setScore, setQuizReady}) => {
+const QuizMain = ({randomList, setQuizReady}) => {
 
-    const [randomList, setRandomList]=useState([]);
     const [currIdx, setCurrIdx]=useState(0);
     const [clicked, setClicked]=useState(false);
+    const [score, setScore]=useState(0);
     const [showScore, setShowScore]=useState(false);
+    const [answer, setAnswer]=useState("");
 
-    const [randomAns, setRandomAns]=useState([]);
-    console.log(randomAns);
 
-    const handleAnswer=(answer)=>{
+    const handleSubmit=(e)=>{
+        e.preventDefault();
         if(answer===randomList[currIdx].meanings) {
             console.log("정답")
             setScore(score+1);
@@ -20,53 +20,52 @@ const QuizMain = ({score, setScore, setQuizReady}) => {
             setClicked(true);
         }
     };
-
+    
     const handleNext=()=>{
         setClicked(false);
         if(currIdx < randomList.length-1){
             setCurrIdx(currIdx+1);
+            setAnswer("");
         } else{
             setShowScore(true);
         }
     }
-    console.log(randomList) //[...] 문제 돌기
-    console.log(randomAns)
 
-    useEffect(()=>{
-        const xx=async()=>{
-            const existedList=await JSON.parse(localStorage.getItem("voca"));
-            //sort() 로직 이해
-            setRandomList(existedList.sort(() => Math.random() - 0.5));
-            setRandomAns(existedList.sort(()=>Math.random()-0.5).slice(0,4));
-        }
-        xx();
-    },[]);
+
 
     return (
         <div>
-            {randomList && randomAns ? (
+            {showScore ? 
+                <div>
+                    <h3>끝</h3>
+                    <h4>당신의 점수는 {score}/{randomList.length}</h4>
+                    <button onClick={()=>setQuizReady(true)}>돌아가기</button>
+                </div>
+            : (
                 <>
-                    <h1>{randomList[currIdx] && randomList[currIdx].words}</h1>
                     <div>
-                        {randomAns.map(list=>(
-                            <div key={list.id}>
-                                <button 
-                                    disabled={clicked}
-                                    onClick={()=>handleAnswer(list.meanings)}
-                                    >{list.meanings}
-                                </button>
-                            </div>
-                        ))}
+                        <h3>{currIdx+1} of {randomList.length}</h3>
+                    </div>
+                    <div>
+                        <h1>{randomList[currIdx] && randomList[currIdx].words}</h1>
+                        <form onSubmit={handleSubmit}>
+                            <input 
+                                placeholder="정답"
+                                onChange={(e)=>setAnswer(e.target.value)}
+                                value={answer}
+                            />
+                            <button
+                            >제출</button>
+                        </form>
                     </div>
                     <div>
                         <button
-                            // disabled={!clicked}
                             onClick={handleNext}
+                            // disabled={!clicked}
                         >NEXT</button>
                     </div>
                 </>
-            ):<div>리스트가 없습니다</div>
-            //length가 4개 이상이어야 실행되게 설정
+            )
         }
         </div>
     )
