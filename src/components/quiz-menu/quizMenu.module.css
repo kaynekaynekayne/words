@@ -1,0 +1,13 @@
+@value softGreen from '../../common/colors.css';
+
+
+.quizMenu{
+    
+}
+
+.btn{
+    padding:1rem;
+    border-radius:0.8rem;
+    color:white;
+    background-color: softGreen;
+}

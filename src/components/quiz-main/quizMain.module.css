@@ -1,5 +1,55 @@
 @value softGreen, softRed, softWhite, midGreen from '../../common/colors.css';
 
+.quizMain{
+    text-align: center;
+}
+
+.score{
+    margin-bottom: 3rem;
+}
+
+.box{
+    background-color: softWhite;
+    border-radius:1rem;
+    padding:3rem;
+}
+
+.qbox{
+    margin-bottom:2rem;
+}
+
+.question{
+
+}
+
+.input{
+    padding:1rem;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.btn{
+    color:white;
+    padding:1rem;
+}
+
+.submit{
+    background-color: softGreen;
+}
+
+.submitted{
+    color:lightgray;
+    background-color: gray;
+    cursor:default;
+}
+
+.next{
+    margin-top:4rem;
+}
+
+
 .correct{
-    color:midGreen;
+    color:softGreen;
 }

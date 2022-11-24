@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import QuizMain from '../../components/quiz-main/quizMain';
 import QuizMenu from '../../components/quiz-menu/quizMenu';
+import styles from './quiz.module.css';
+
 
 const Quiz = () => {
     const [quizReady, setQuizReady]=useState(true);
@@ -12,7 +14,7 @@ const Quiz = () => {
     },[]);
 
     return (
-        <div>
+        <div className={styles.quiz}>
             {quizReady ? 
                 <QuizMenu 
                     setQuizReady={setQuizReady}
@@ -24,7 +26,6 @@ const Quiz = () => {
                     setQuizReady={setQuizReady}
                 />
             }
-            
         </div>
     )
 }

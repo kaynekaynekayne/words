@@ -30,7 +30,7 @@ const QuizMain = ({randomList, setQuizReady}) => {
     }
 
     return (
-        <div>
+        <div className={styles.quizMain}>
             {showScore ? 
                 <div>
                     <h3>끝</h3>
@@ -38,32 +38,35 @@ const QuizMain = ({randomList, setQuizReady}) => {
                     <button onClick={()=>setQuizReady(true)}>돌아가기</button>
                 </div>
             : (
-                <>
-                    <div>
+                <div>
+                    <div className={styles.score}>
                         <h3>{currIdx+1} of {randomList.length}</h3>
                     </div>
-                    <div>
-                        <h1>{randomList[currIdx] && randomList[currIdx].words}</h1>
+                    <div className={styles.box}>
+                        <div className={styles.qbox}>
+                            <h1 className={styles.question}>{randomList[currIdx] && randomList[currIdx].words}</h1>
+                            {clicked && <h4 className={styles.correct}>{randomList[currIdx].meanings}</h4>}
+                        </div>
                         <form onSubmit={handleSubmit}>
-                            <input 
+                            <input
+                                className={styles.input}
                                 placeholder="정답"
                                 onChange={(e)=>setAnswer(e.target.value)}
                                 value={answer}
                             />
                             <button
+                                className={`${clicked ? styles.submitted : styles.submit} ${styles.btn}`}
                                 disabled={clicked}
                                 onClick={()=>handleSubmit}
                             >제출</button>
-                            {clicked && <div className={styles.correct}>{randomList[currIdx].meanings}</div>}
                         </form>
-                    </div>
-                    <div>
                         <button
+                            className={`${!clicked ? styles.submitted : styles.submit} ${styles.btn} ${styles.next}`}
                             disabled={!clicked}
                             onClick={handleNext}
                         >NEXT</button>
                     </div>
-                </>
+                </div>
             )
         }
         </div>

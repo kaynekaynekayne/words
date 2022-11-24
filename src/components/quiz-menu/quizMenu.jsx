@@ -1,4 +1,6 @@
 import React from 'react'
+import styles from './quizMenu.module.css';
+
 
 const QuizMenu = ({list, setQuizReady}) => {
     const startQuiz=()=>{
@@ -10,8 +12,11 @@ const QuizMenu = ({list, setQuizReady}) => {
         }
     }
     return (
-        <div>
-            <button onClick={startQuiz}>START</button>
+        <div className={styles.quizMenu}>
+            <button 
+                className={styles.btn} 
+                onClick={startQuiz}
+            >START</button>
         </div>
     )
 }
