@@ -1,6 +1,11 @@
 @value softWhite from '../../common/colors.css';
 
-.header{
+.nav{
     padding:1.5rem;
     background-color: softWhite;
+}
+
+.ul{
+    display:flex;
+    justify-content: space-around;
 }

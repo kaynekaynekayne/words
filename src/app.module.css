@@ -20,4 +20,5 @@ input, button{
 
 button{
     cursor: pointer;
+    background-color: transparent;
 }
