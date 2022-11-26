@@ -1,8 +1,14 @@
-@value softGreen from '../../common/colors.css';
+@value softGreen, softRed, softWhite from '../../common/colors.css';
 
 
 .quizMenu{
-    
+    height:100%;
+}
+
+.preBtn{
+    padding:0.5rem;
+    color:white;
+    background-color: softRed;
 }
 
 .btn{
