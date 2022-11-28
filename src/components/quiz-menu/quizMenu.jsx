@@ -2,12 +2,11 @@ import React from 'react'
 import styles from './quizMenu.module.css';
 
 
-const QuizMenu = ({list, setQuizReady, setShowWord, showWord}) => {
+const QuizMenu = ({list, setQuizReady, setShowWord, showWord, setNumQuiz}) => {
 
-    
     const startQuiz=()=>{
         if(list.length<3){
-            alert("단어장의 단어가 최소 4개 이상이어야 시작할 수 있습니다");
+            alert("단어장에 단어가 없습니다");
             return;
         } else{
             setQuizReady(false)
@@ -29,6 +28,7 @@ const QuizMenu = ({list, setQuizReady, setShowWord, showWord}) => {
                     type="number"
                     className={`${styles.input} ${styles.box}`}
                     placeholder='문제 수'
+                    onChange={(e)=>setNumQuiz(e.target.value)}
                 />
             </div>
             <button 

@@ -26,6 +26,10 @@
     padding:1rem;
 }
 
+.input:focus{
+    outline: none;
+}
+
 .btn{
     color:white;
     padding:1rem;
