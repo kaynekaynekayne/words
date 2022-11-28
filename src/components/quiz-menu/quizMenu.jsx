@@ -5,7 +5,7 @@ import styles from './quizMenu.module.css';
 const QuizMenu = ({list, setQuizReady, setShowWord, showWord, setNumQuiz}) => {
 
     const startQuiz=()=>{
-        if(list.length<3){
+        if(list.length===0){
             alert("단어장에 단어가 없습니다");
             return;
         } else{

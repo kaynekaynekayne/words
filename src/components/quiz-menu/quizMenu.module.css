@@ -1,10 +1,6 @@
 @value softGreen, softRed, softWhite, midGreen, lightGray from '../../common/colors.css';
 
 .quizMenu{
-    /* display:flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
 
 }
 
@@ -17,7 +13,6 @@
 }
 
 .preBtn{
-    /* color:white; */
 }
 
 .input{

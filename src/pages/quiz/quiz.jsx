@@ -9,8 +9,6 @@ const Quiz = () => {
     const [randomList, setRandomList]=useState([]);
     const [showWord, setShowWord]=useState(true);
     const [numQuiz, setNumQuiz]=useState(0);
-    
-    console.log(numQuiz);
 
     useEffect(()=>{
         const existedList=JSON.parse(localStorage.getItem("voca"));

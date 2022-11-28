@@ -10,8 +10,6 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
     const [answer, setAnswer]=useState("");
     const [clicked, setClicked]=useState(false);
 
-    console.log(randomList);
-    
     const handleSubmit=(e)=>{
         e.preventDefault();
         if((showWord && answer===randomList[currIdx].meanings) || (!showWord && answer===randomList[currIdx].words)) {
@@ -46,9 +44,7 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
                     <div className={styles.box}>
                         <div className={styles.qbox}>
                             <h1 className={styles.question}>{(randomList[currIdx] && showWord) ? randomList[currIdx].words : randomList[currIdx] && randomList[currIdx].meanings}</h1>
-                            {/* <h1 className={styles.question}>{randomList[currIdx] && randomList[currIdx].words}</h1> */}
                             {clicked && <h4 className={styles.correct}>{showWord && randomList[currIdx] ? randomList[currIdx].meanings : randomList[currIdx].words}</h4>}
-                            {/* {clicked && <h4 className={styles.correct}>{randomList[currIdx].meanings}</h4>} */}
                         </div>
                         <form onSubmit={handleSubmit}>
                             <input
