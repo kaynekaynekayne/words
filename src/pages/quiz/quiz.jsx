@@ -7,10 +7,11 @@ import styles from './quiz.module.css';
 const Quiz = () => {
     const [quizReady, setQuizReady]=useState(true);
     const [randomList, setRandomList]=useState([]);
-
+    const [showWord, setShowWord]=useState(true);
+    
     useEffect(()=>{
         const existedList=JSON.parse(localStorage.getItem("voca"));
-        setRandomList(existedList.sort(() => Math.random() - 0.5));
+        existedList && setRandomList(existedList.sort(() => Math.random() - 0.5));
     },[]);
 
     return (
@@ -19,6 +20,7 @@ const Quiz = () => {
                 <QuizMenu 
                     setQuizReady={setQuizReady}
                     list={randomList}
+                    setShowWord={setShowWord}
                 />
             :
                 <QuizMain 

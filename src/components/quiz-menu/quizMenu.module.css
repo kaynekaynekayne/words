@@ -1,19 +1,42 @@
-@value softGreen, softRed, softWhite from '../../common/colors.css';
-
+@value softGreen, softRed, softWhite, midGreen, lightGray from '../../common/colors.css';
 
 .quizMenu{
-    height:100%;
+    /* display:flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+.box{
+    width:100%;
+    height:4rem;
+    margin-bottom:1rem;
+    border-radius:0.4rem;
+    background-color: softWhite;
 }
 
 .preBtn{
-    padding:0.5rem;
-    color:white;
-    background-color: softRed;
+    /* color:white; */
+}
+
+.preBtn:hover{
+    background-color: lightGray;
+}
+
+.input{
+    padding:1rem;
+}
+
+.input:focus{
+    outline:none;
 }
 
 .btn{
-    padding:1rem;
-    border-radius:0.8rem;
     color:white;
     background-color: softGreen;
+}
+
+.btn:hover{
+    background-color: midGreen;
 }
