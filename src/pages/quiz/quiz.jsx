@@ -8,6 +8,7 @@ const Quiz = () => {
     const [quizReady, setQuizReady]=useState(true);
     const [randomList, setRandomList]=useState([]);
     const [showWord, setShowWord]=useState(true);
+    // const [numOfQuiz, setNum]=useState(0);
     
     useEffect(()=>{
         const existedList=JSON.parse(localStorage.getItem("voca"));
@@ -20,12 +21,14 @@ const Quiz = () => {
                 <QuizMenu 
                     setQuizReady={setQuizReady}
                     list={randomList}
+                    showWord={showWord}
                     setShowWord={setShowWord}
                 />
             :
                 <QuizMain 
                     randomList={randomList.length > 30 ? randomList.slice(0,30) : randomList} 
                     setQuizReady={setQuizReady}
+                    showWord={showWord}
                 />
             }
         </div>

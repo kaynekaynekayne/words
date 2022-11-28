@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './quizMain.module.css';
 
 
-const QuizMain = ({randomList, setQuizReady}) => {
+const QuizMain = ({randomList, setQuizReady, showWord}) => {
 
     const [currIdx, setCurrIdx]=useState(0);
     const [score, setScore]=useState(0);
@@ -10,10 +10,11 @@ const QuizMain = ({randomList, setQuizReady}) => {
     const [answer, setAnswer]=useState("");
     const [clicked, setClicked]=useState(false);
 
+        
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        if(answer===randomList[currIdx].meanings) {
+        if((showWord && answer===randomList[currIdx].meanings) || (!showWord && answer===randomList[currIdx].words)) {
             setScore(score+1);
         }
         setClicked(true);
@@ -44,8 +45,10 @@ const QuizMain = ({randomList, setQuizReady}) => {
                     </div>
                     <div className={styles.box}>
                         <div className={styles.qbox}>
-                            <h1 className={styles.question}>{randomList[currIdx] && randomList[currIdx].words}</h1>
-                            {clicked && <h4 className={styles.correct}>{randomList[currIdx].meanings}</h4>}
+                            <h1 className={styles.question}>{showWord ? randomList[currIdx].words : randomList[currIdx].meanings}</h1>
+                            {/* <h1 className={styles.question}>{randomList[currIdx] && randomList[currIdx].words}</h1> */}
+                            {clicked && <h4 className={styles.correct}>{showWord ? randomList[currIdx].meanings : randomList[currIdx].words}</h4>}
+                            {/* {clicked && <h4 className={styles.correct}>{randomList[currIdx].meanings}</h4>} */}
                         </div>
                         <form onSubmit={handleSubmit}>
                             <input
