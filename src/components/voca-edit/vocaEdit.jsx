@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Button from '../button/button';
 import styles from './vocaEdit.module.css';
 import {RiDeleteBinLine} from 'react-icons/ri';
 import {BsPencilSquare} from 'react-icons/bs';
