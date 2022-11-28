@@ -22,7 +22,6 @@ const Home = () => {
             setLists(exitedList);
             setTotalPages(Math.ceil(exitedList.length/DATA_PER_PAGE));
         }
-        console.log(lock);
     },[lock]);
 
     const handlePage=(num)=>{

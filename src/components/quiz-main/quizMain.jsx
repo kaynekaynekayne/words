@@ -10,8 +10,6 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
     const [answer, setAnswer]=useState("");
     const [clicked, setClicked]=useState(false);
 
-        
-
     const handleSubmit=(e)=>{
         e.preventDefault();
         if((showWord && answer===randomList[currIdx].meanings) || (!showWord && answer===randomList[currIdx].words)) {
