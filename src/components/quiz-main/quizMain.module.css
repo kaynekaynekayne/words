@@ -5,7 +5,7 @@
 }
 
 .score{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .box{
@@ -16,10 +16,6 @@
 
 .qbox{
     margin-bottom:2rem;
-}
-
-.question{
-
 }
 
 .input{
@@ -33,9 +29,6 @@
 .btn{
     color:white;
     padding:1rem;
-}
-
-.submit{
     background-color: softGreen;
 }
 
@@ -45,11 +38,14 @@
     cursor:default;
 }
 
-.next{
-    margin-top:4rem;
+.form{
+    margin-bottom:4rem;
 }
-
 
 .correct{
     color:softGreen;
+}
+
+.info{
+    margin-bottom: 3rem;
 }

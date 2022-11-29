@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from '../button/button';
 import styles from './quizMain.module.css';
 
 
@@ -31,10 +32,12 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
     return (
         <div className={styles.quizMain}>
             {showScore ? 
-                <div>
-                    <h3>끝</h3>
-                    <h4>당신의 점수는 {score}/{randomList.length}</h4>
-                    <button onClick={()=>setQuizReady(true)}>돌아가기</button>
+                <div className={styles.box}>
+                    <div className={styles.info}>
+                        <h2>끝</h2>
+                        <h3>당신의 점수는 {score}/{randomList.length}</h3>
+                    </div>
+                    <Button title="돌아가기" onClick={()=>setQuizReady(true)}/>
                 </div>
             : (
                 <div>
@@ -46,7 +49,7 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
                             <h1 className={styles.question}>{(randomList[currIdx] && showWord) ? randomList[currIdx].words : randomList[currIdx] && randomList[currIdx].meanings}</h1>
                             {clicked && <h4 className={styles.correct}>{showWord && randomList[currIdx] ? randomList[currIdx].meanings : randomList[currIdx].words}</h4>}
                         </div>
-                        <form onSubmit={handleSubmit}>
+                        <form className={styles.form} onSubmit={handleSubmit}>
                             <input
                                 className={styles.input}
                                 placeholder="정답"
@@ -54,13 +57,13 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
                                 value={answer}
                             />
                             <button
-                                className={`${clicked ? styles.submitted : styles.submit} ${styles.btn}`}
+                                className={`${clicked ? styles.submitted : ""} ${styles.btn}`}
                                 disabled={clicked}
                                 onClick={()=>handleSubmit}
                             >제출</button>
                         </form>
                         <button
-                            className={`${!clicked ? styles.submitted : styles.submit} ${styles.btn} ${styles.next}`}
+                            className={`${!clicked ? styles.submitted : ""} ${styles.btn}`}
                             disabled={!clicked}
                             onClick={handleNext}
                         >NEXT</button>
