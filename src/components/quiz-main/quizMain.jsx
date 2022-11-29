@@ -32,22 +32,22 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
     return (
         <div className={styles.quizMain}>
             {showScore ? 
-                <div className={styles.box}>
+                <div>
                     <div className={styles.info}>
-                        <h2>끝</h2>
+                        <h2>끝!</h2>
                         <h3>당신의 점수는 {score}/{randomList.length}</h3>
                     </div>
                     <Button title="돌아가기" onClick={()=>setQuizReady(true)}/>
                 </div>
             : (
                 <div>
-                    <div className={styles.score}>
-                        <h3>{currIdx+1} of {randomList.length}</h3>
-                    </div>
+                    <h3>{currIdx+1} of {randomList.length}</h3>
                     <div className={styles.box}>
                         <div className={styles.qbox}>
                             <h1 className={styles.question}>{(randomList[currIdx] && showWord) ? randomList[currIdx].words : randomList[currIdx] && randomList[currIdx].meanings}</h1>
-                            {clicked && <h4 className={styles.correct}>{showWord && randomList[currIdx] ? randomList[currIdx].meanings : randomList[currIdx].words}</h4>}
+                            <div className={styles.correctBox}>
+                                {clicked && <span className={styles.correct}>{showWord && randomList[currIdx] ? randomList[currIdx].meanings : randomList[currIdx].words}</span>}
+                            </div>
                         </div>
                         <form className={styles.form} onSubmit={handleSubmit}>
                             <input

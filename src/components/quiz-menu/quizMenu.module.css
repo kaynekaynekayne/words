@@ -1,9 +1,5 @@
 @value softGreen, softRed, softWhite, midGreen, lightGray from '../../common/colors.css';
 
-.quizMenu{
-
-}
-
 .box{
     width:100%;
     height:4rem;

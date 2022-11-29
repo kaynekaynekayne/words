@@ -4,18 +4,19 @@
     text-align: center;
 }
 
-.score{
-    margin-bottom: 2rem;
-}
-
 .box{
     background-color: softWhite;
     border-radius:1rem;
     padding:3rem;
+    margin-top:2rem;
 }
 
 .qbox{
     margin-bottom:2rem;
+}
+
+.form{
+    margin-bottom:4rem;
 }
 
 .input{
@@ -38,12 +39,12 @@
     cursor:default;
 }
 
-.form{
-    margin-bottom:4rem;
-}
-
 .correct{
     color:softGreen;
+}
+
+.correctBox{
+    height:1rem;
 }
 
 .info{
