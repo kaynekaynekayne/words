@@ -17,11 +17,11 @@ const QuizMenu = ({list, setQuizReady, setShowWord, showWord, setNumQuiz}) => {
             <div>
                 <button 
                     onClick={()=>setShowWord(true)}
-                    className={`${styles.preBtn} ${styles.box} ${showWord ? styles.clicked : ""}`}
+                    className={`${styles.box} ${showWord ? styles.clicked : ""}`}
                 >단어 보기</button>
                 <button 
                     onClick={()=>setShowWord(false)}
-                    className={`${styles.preBtn} ${styles.box} ${showWord ? "" : styles.clicked}`}
+                    className={`${styles.box} ${showWord ? "" : styles.clicked}`}
                 >뜻 보기</button>
 
                 <input 
