@@ -21,6 +21,7 @@
 
 ## 미리보기
 ### 홈 화면  
+![quiz2](https://user-images.githubusercontent.com/96046698/204846354-24100897-6c40-4b08-b4ea-a3f3cb8c8247.png)  
 ![ezgif-1-7f5660c6d1](https://user-images.githubusercontent.com/96046698/204842957-837a81e1-2526-48bb-9505-209bb471c108.gif)  
 
 
