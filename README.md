@@ -22,16 +22,12 @@
 ## 미리보기
 ### 홈 화면  
 ![quiz2](https://user-images.githubusercontent.com/96046698/204846354-24100897-6c40-4b08-b4ea-a3f3cb8c8247.png)  
-![ezgif-1-7f5660c6d1](https://user-images.githubusercontent.com/96046698/204842957-837a81e1-2526-48bb-9505-209bb471c108.gif)  
 
 
 ### 퀴즈  
 ![quizzzz2](https://user-images.githubusercontent.com/96046698/204847050-6ba3a9aa-3ff9-4d12-922b-5c66b6a0db5c.png)  
 ![quiq2](https://user-images.githubusercontent.com/96046698/204847687-e99d8594-9310-4d4d-a30d-0a0985af89f8.png)  
-![ezgif-1-8045c6e012](https://user-images.githubusercontent.com/96046698/204844074-d86a2d62-eed1-4dd6-b2cf-587f94e823d8.gif)  
-
-
-
+ 
 
 
 
