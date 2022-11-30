@@ -19,13 +19,14 @@
 #### 배포
 - netlify  
 
-## 미리보기 (미완)
+## 미리보기
 ### 홈 화면  
 ![ezgif-1-7f5660c6d1](https://user-images.githubusercontent.com/96046698/204842957-837a81e1-2526-48bb-9505-209bb471c108.gif)  
 
 
 ### 퀴즈  
-![genre2](https://user-images.githubusercontent.com/96046698/201510332-99acf9f5-fa3f-422b-a315-f8c867c7b201.gif)  
+![ezgif-1-8045c6e012](https://user-images.githubusercontent.com/96046698/204844074-d86a2d62-eed1-4dd6-b2cf-587f94e823d8.gif)  
+
 
 
 
