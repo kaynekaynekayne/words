@@ -26,6 +26,7 @@
 
 
 ### 퀴즈  
+![quizzzz2](https://user-images.githubusercontent.com/96046698/204847050-6ba3a9aa-3ff9-4d12-922b-5c66b6a0db5c.png)  
 ![ezgif-1-8045c6e012](https://user-images.githubusercontent.com/96046698/204844074-d86a2d62-eed1-4dd6-b2cf-587f94e823d8.gif)  
 
 
