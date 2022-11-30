@@ -21,7 +21,8 @@
 
 ## 미리보기 (미완)
 ### 홈 화면  
-![ezgif-1-827d9ecf34](https://user-images.githubusercontent.com/96046698/204842582-88905f4e-fb4b-4974-936d-82b1355d0238.gif)  
+![ezgif-1-7f5660c6d1](https://user-images.githubusercontent.com/96046698/204842957-837a81e1-2526-48bb-9505-209bb471c108.gif)  
+
 
 ### 퀴즈  
 ![genre2](https://user-images.githubusercontent.com/96046698/201510332-99acf9f5-fa3f-422b-a315-f8c867c7b201.gif)  
