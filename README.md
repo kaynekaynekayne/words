@@ -21,9 +21,9 @@
 
 ## 미리보기 (미완)
 ### 홈 화면  
-![home3](https://user-images.githubusercontent.com/96046698/201510967-b31a0d35-d874-45e8-8595-75756c6e0e74.gif)  
+![screen-recording-_5_](https://user-images.githubusercontent.com/96046698/204841853-12f8dba1-967e-4679-95f9-60a4c0f31d96.gif)  
 
-### 장르별 목록  
+### 퀴즈  
 ![genre2](https://user-images.githubusercontent.com/96046698/201510332-99acf9f5-fa3f-422b-a315-f8c867c7b201.gif)  
 
 
