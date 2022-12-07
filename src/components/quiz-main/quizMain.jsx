@@ -44,9 +44,9 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
                     <h3>{currIdx+1} of {randomList.length}</h3>
                     <div className={styles.box}>
                         <div className={styles.qbox}>
-                            <h1 className={styles.question}>{(randomList[currIdx] && showWord) ? randomList[currIdx].words : randomList[currIdx] && randomList[currIdx].meanings}</h1>
+                            <h1 className={styles.question}>{showWord ? randomList[currIdx].words : randomList[currIdx].meanings}</h1>
                             <div className={styles.correctBox}>
-                                {clicked && <span className={styles.correct}>{showWord && randomList[currIdx] ? randomList[currIdx].meanings : randomList[currIdx].words}</span>}
+                                {clicked && <span className={styles.correct}>{showWord ? randomList[currIdx].meanings : randomList[currIdx].words}</span>}
                             </div>
                         </div>
                         <form className={styles.form} onSubmit={handleSubmit}>
@@ -59,7 +59,7 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
                             <button
                                 className={`${clicked ? styles.submitted : ""} ${styles.btn}`}
                                 disabled={clicked}
-                                onClick={()=>handleSubmit}
+                                onClick={handleSubmit}
                             >제출</button>
                         </form>
                         <button

@@ -23,7 +23,6 @@ const QuizMenu = ({list, setQuizReady, setShowWord, showWord, setNumQuiz}) => {
                     onClick={()=>setShowWord(false)}
                     className={`${styles.box} ${showWord ? "" : styles.clicked}`}
                 >뜻 보기</button>
-
                 <input 
                     type="number"
                     className={`${styles.input} ${styles.box}`}
