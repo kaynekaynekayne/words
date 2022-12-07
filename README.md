@@ -22,12 +22,15 @@
 ## 미리보기
 ### 홈 화면  
 ![quiz2](https://user-images.githubusercontent.com/96046698/204846354-24100897-6c40-4b08-b4ea-a3f3cb8c8247.png)  
+### 단어 숨김  
+![quizzzz5](https://user-images.githubusercontent.com/96046698/206115884-c1ba55b8-1cac-4733-a716-f805120000de.png)  
 
-
-### 퀴즈  
+### 퀴즈 설정  
 ![quizzzz2](https://user-images.githubusercontent.com/96046698/204847050-6ba3a9aa-3ff9-4d12-922b-5c66b6a0db5c.png)  
+### 퀴즈 화면  
 ![quiq2](https://user-images.githubusercontent.com/96046698/204847687-e99d8594-9310-4d4d-a30d-0a0985af89f8.png)  
 ![quizzzz3](https://user-images.githubusercontent.com/96046698/206113904-193015a9-4b12-4256-8dec-22b790a77e15.png)  
-
+### 퀴즈 결과  
+![quizzzz4](https://user-images.githubusercontent.com/96046698/206115180-c70cc4a5-0def-406f-ac58-7d1dcc415692.png)  
 
 
