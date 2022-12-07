@@ -22,24 +22,24 @@
     border-radius: 0.5rem;
 }
 
+.check{
+    color: softGreen;
+    background-color: softWhite;
+}
+
 .check:hover{
     color:white;
     background-color: softGreen;
 }
 
-.check{
-    color: softGreen;
+.del{
+    color: softRed;
     background-color: softWhite;
 }
 
 .del:hover{
     color:white;
     background-color: softRed;
-}
-
-.del{
-    color: softRed;
-    background-color: softWhite;
 }
 
 .lock{

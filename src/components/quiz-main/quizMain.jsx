@@ -32,7 +32,7 @@ const QuizMain = ({randomList, setQuizReady, showWord}) => {
     return (
         <div className={styles.quizMain}>
             {showScore ? 
-                <div>
+                <div className={styles.box}>
                     <div className={styles.info}>
                         <h2>끝!</h2>
                         <h3>당신의 점수는 {score}/{randomList.length}</h3>

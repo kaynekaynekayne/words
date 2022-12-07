@@ -14,9 +14,6 @@
     outline:none;
 }
 
-.lock{
-    color:white
-}
 
 @media screen and (max-width:768px){
     .input{

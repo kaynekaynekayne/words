@@ -1,9 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import Invisible from '../../components/invisible/invisible';
 import Pagination from '../../components/pagination/pagination';
+import VocaContainer from '../../components/voca-container/vocaContainer';
 import { DATA_PER_PAGE } from '../../utils/constants';
 import styles from './home.module.css';
-import VocaContainer from '../../components/voca-container/vocaContainer';
 
 
 const Home = () => {

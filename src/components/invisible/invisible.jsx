@@ -4,6 +4,7 @@ import Button from '../button/button';
 import styles from './invisible.module.css';
 
 const Invisible = ({setLock}) => {
+    
     const handleLock=(title)=>{
         setLock(prev=>{
             return {
