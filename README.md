@@ -27,7 +27,7 @@
 ### 퀴즈  
 ![quizzzz2](https://user-images.githubusercontent.com/96046698/204847050-6ba3a9aa-3ff9-4d12-922b-5c66b6a0db5c.png)  
 ![quiq2](https://user-images.githubusercontent.com/96046698/204847687-e99d8594-9310-4d4d-a30d-0a0985af89f8.png)  
- 
+![quizzzz3](https://user-images.githubusercontent.com/96046698/206113904-193015a9-4b12-4256-8dec-22b790a77e15.png)  
 
 
 
