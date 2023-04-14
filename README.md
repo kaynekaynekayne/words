@@ -13,7 +13,7 @@
 ## 기술
 #### 프론트엔드
 - React  
-- CSS  
+- CSS-module  
 - LocalStorage  
 
 #### 배포
