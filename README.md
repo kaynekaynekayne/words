@@ -14,7 +14,6 @@
 #### 프론트엔드
 - React  
 - CSS-module  
-- LocalStorage  
 
 #### 배포
 - netlify  
